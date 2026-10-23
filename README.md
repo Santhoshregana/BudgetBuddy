@@ -1,4 +1,4 @@
-# BudgetBuddy — Milestone 1 foundation
+# BudgetBuddy — 
 
 This project implements Milestone 1 (Weeks 1–2): project scope, initial database design, Django REST Framework backend setup, JWT authentication, and a React frontend skeleton. The backend uses modular apps and environment-specific settings. It uses Django REST Framework rather than FastAPI.
 
