@@ -1,9 +1,9 @@
-# BudgetBuddy — 
+# BudgetBuddy 
 
-This project implements Milestone 1 (Weeks 1–2): project scope, initial database design, Django REST Framework backend setup, JWT authentication, and a React frontend skeleton. The backend uses modular apps and environment-specific settings. It uses Django REST Framework rather than FastAPI.
+The project scope, initial database design, Django REST Framework backend setup, JWT authentication, and a React frontend skeleton. The backend uses modular apps and environment-specific settings. It uses Django REST Framework rather than FastAPI.
 
-## Milestone 1 scope and roles
-- A registered student manages their own profile and, in later milestones, their income, expenses, budgets, savings goals, notifications, and reports.
+#project scope
+- A registered student manages their own profile and, their income, expenses, budgets, savings goals, notifications, and reports.
 - Django staff users are administrators who can manage the application through Django Admin; regular users are not granted staff access.
 - This milestone establishes authentication and the database schema. Expense/income workflows, dashboards, analytics, notification delivery, report generation, and public CRUD APIs are later implementation work.
 
@@ -26,7 +26,7 @@ All finance and account-related records are linked to Django's user model. Delet
 
 The schema is implemented as Django models and checked-in migrations. Development uses SQLite; production settings require a PostgreSQL `DATABASE_URL`. Both environments use the same migrations.
 
-## Included in Milestone 1
+## Included 
 - Django REST API with public registration, JWT login/refresh, authenticated profile endpoint, and health check.
 - Profile creation during account registration.
 - React + Vite frontend skeleton for registration/login and a profile test.
@@ -66,7 +66,7 @@ Open the Vite URL printed in the terminal (usually `http://localhost:5173`).
 - `POST /api/auth/token/refresh/` — refresh access token
 - `GET /api/auth/me/` — authenticated account profile; send `Authorization: Bearer <access-token>`.
 
-The finance models are database foundations for later milestones; their CRUD endpoints and corresponding user interfaces are not part of Milestone 1.
+The finance models are database foundations for later milestones; their CRUD endpoints and corresponding user interfaces .
 
 ## Deployment notes
 Do not deploy with the development secret. Set `DJANGO_SETTINGS_MODULE=config.settings.production`, a strong unique `DJANGO_SECRET_KEY` (at least 50 characters), `DJANGO_ALLOWED_HOSTS` to the backend hostname, `CORS_ALLOWED_ORIGINS` to the frontend origin, and `DATABASE_URL` to a persistent PostgreSQL database URL. Use the backend build command `bash build.sh` and start command `gunicorn config.wsgi:application`. The exact commands/settings may need adjustment to match the selected host's current interface.
